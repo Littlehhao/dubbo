@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.40.20:3306/dubbox?characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: 123123
+      driver-class-name: com.mysql.jdbc.Driver
+      initial-size: 10
+      max-active: 30
+      min-idle: 10
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      use-global-data-source-stat: true
+      filter:
+        stat:
+          enabled: true
+        wall:
+          enabled: true
+        log4j2:
+          enabled: true
+
+  dubbo:
+    protocol:
+      name: dubbo
+      port: 20880
+    application :
+      name: dubbo_provider
+    registry:
+      address: zookeeper://192.168.5.56:2181
+
