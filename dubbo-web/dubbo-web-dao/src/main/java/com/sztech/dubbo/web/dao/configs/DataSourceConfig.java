@@ -1,4 +1,4 @@
-package com.sztech.dubbo.web.dao.config;
+package com.sztech.dubbo.web.dao.configs;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.sztech.dubbo.web.dao.helper.PageHelperUtils;
@@ -22,8 +22,8 @@ import javax.sql.DataSource;
  * 数据源配置类
  * Created by zhongjunkai on 17/12/25.
  */
-@Configuration
-@MapperScan(value = "com.sztech.dubbo.web", sqlSessionTemplateRef = "sqlSessionTemplate")
+/*@Configuration
+@MapperScan(value = "com.sztech.dubbo.web", sqlSessionTemplateRef = "sqlSessionTemplate")*/
 public class DataSourceConfig {
 
     /**
